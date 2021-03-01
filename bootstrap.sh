@@ -236,10 +236,6 @@ if [ "$OS" = "arch" ] && [ -e /usr/src/LaMachine ]; then
     exit 6
 fi
 
-if [[ "$USERNAME" == "root" ]]; then
-    fatalerror "Do not run the LaMachine bootstrap process as root!" #we can't do this message earlier because people coming from LaMachine v1 do run as root sometimes
-fi
-
 
 OUTDATED=0
 if [ "$OS" != "mac" ]; then
